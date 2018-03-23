@@ -1,6 +1,6 @@
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(MOT_SENSOR_HUB_HW_TYPE_L4), true)
+ifeq ($(BOARD_HAS_MODS_SUPPORT), true)
 
 ################################################################################
 ## lsiio #######################################################################
@@ -47,4 +47,4 @@ LOCAL_C_INCLUDES := \
 
 include $(BUILD_EXECUTABLE)
 
-endif # MOT_SENSOR_HUB_HW_TYPE_L4
+endif # BOARD_HAS_MODS_SUPPORT

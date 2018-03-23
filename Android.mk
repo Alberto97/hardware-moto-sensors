@@ -143,7 +143,7 @@ ifeq ($(BOARD_USES_MOT_SENSOR_HUB), true)
 
         endif
 
-        ifeq ($(MOT_SENSOR_HUB_HW_TYPE_L4), true)
+        ifeq ($(BOARD_HAS_MODS_SUPPORT), true)
             LOCAL_REQUIRED_MODULES += sensors.iio
         endif
 
@@ -299,7 +299,7 @@ ifeq ($(BOARD_USES_MOT_SENSOR_HUB), true)
         motosh_bin/CRC32.c
     LOCAL_REQUIRED_MODULES += sensorhub-blacklist.txt
 
-    ifeq ($(MOT_SENSOR_HUB_HW_TYPE_L4), true)
+    ifeq ($(BOARD_HAS_MODS_SUPPORT), true)
         ifneq ($(TARGET_BUILD_VARIANT),user)
             # Build libiio.so
             LOCAL_REQUIRED_MODULES += libiio

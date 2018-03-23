@@ -15,6 +15,8 @@
 
 LOCAL_PATH := $(call my-dir)
 
+ifeq ($(BOARD_HAS_MODS_SUPPORT), true)
+
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := sensors.iio
@@ -58,4 +60,6 @@ LOCAL_CXXFLAGS += -Weffc++ -std=c++14
 LOCAL_PROPRIETARY_MODULE := true
 
 include $(BUILD_SHARED_LIBRARY)
+
+endif
 
