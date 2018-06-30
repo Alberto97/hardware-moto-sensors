@@ -1082,8 +1082,8 @@ int HubSensors::readEvents(sensors_event_t* d, int dLen)
                 if (isHandleEnabled(ID_MOTO_GLANCE_GESTURE)) {
                     data->version = SENSORS_EVENT_T_SIZE;
                     data->sensor = ID_MOTO_GLANCE_GESTURE;
-                    data->type = SENSOR_TYPE_MOTO_GLANCE_GESTURE;
-                    data->data[0] = STM16TOH(buff.data); /* Gesture that triggered glance */
+                    data->type = SENSOR_TYPE_PICK_UP_GESTURE;
+                    data->data[0] = 1.0;                   /* set to 1 for Android compatibility */
                     data->data[1] = 0;
                     data->data[2] = 0;
                     data->timestamp = buff.timestamp;
