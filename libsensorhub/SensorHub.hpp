@@ -19,7 +19,7 @@
 #include <memory>
 #include <algorithm>
 
-#include "Endian.hpp"
+#include "Endian.h"
 
 /** The register number (2 bytes), and length (2 bytes). */
 #define SENSORHUB_CMD_LENGTH 4

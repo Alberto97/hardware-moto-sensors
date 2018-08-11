@@ -31,6 +31,11 @@ ifneq (,$(filter userdebug eng,$(TARGET_BUILD_VARIANT)))
     LOCAL_CFLAGS += -DDEBUG
 endif
 
+LOCAL_CPPFLAGS += \
+    -Werror \
+    -Wno-unused-parameter \
+    -Wno-unused-variable
+
 LOCAL_SRC_FILES :=              \
     SensorHub.cpp Endian.cpp
 

@@ -289,6 +289,7 @@ ifeq ($(BOARD_USES_MOT_SENSOR_HUB), true)
     LOCAL_MODULE := motosh
     #LOCAL_CFLAGS+= -D_DEBUG
     LOCAL_CFLAGS += -Wall -Wextra
+    LOCAL_CPPFLAGS += -Werror -Wno-unused-parameter -Wno-unused-variable
     # Added by top level make files: -std=gnu++11
     LOCAL_CXXFLAGS += -Weffc++
     LOCAL_SHARED_LIBRARIES := libcutils libc libsensorhub liblog
