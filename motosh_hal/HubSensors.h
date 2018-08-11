@@ -199,7 +199,6 @@ private:
     int update_delay();
     uint32_t mEnabled;
     uint32_t mWakeEnabled;
-    uint32_t mPendingMask;
     uint64_t mEnabledHandles;
     uint8_t mMagCal[MOTOSH_MAG_CAL_SIZE];
     uint8_t mGyroCal[MOTOSH_GYRO_CAL_SIZE];

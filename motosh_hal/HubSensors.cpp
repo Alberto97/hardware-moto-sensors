@@ -46,7 +46,6 @@ HubSensors::HubSensors()
 : SensorBase(SENSORHUB_DEVICE_NAME, NULL, SENSORHUB_AS_DATA_NAME),
       mEnabled(0),
       mWakeEnabled(0),
-      mPendingMask(0),
       mEnabledHandles(0),
       mGyroEnabled(0),
       mUncalGyroEnabled(0),
@@ -63,7 +62,6 @@ HubSensors::HubSensors()
       nextPendingEvent(0)
 {
     // read the actual value of all sensors if they're enabled already
-    struct input_absinfo absinfo;
     char flags[3];
     FILE *fp;
     int size;
