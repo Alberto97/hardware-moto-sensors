@@ -163,7 +163,7 @@ int RearProxSensor::readEvents(sensors_event_t* data, int count)
 
 	ssize_t n = mInputReader.fill(data_fd);
 	if (n < 0) {
-		ALOGE("RearProxSensor: read error %ld, dropped events", n);
+		ALOGE("RearProxSensor: read error, dropped events");
 		return 0;
 	}
 
